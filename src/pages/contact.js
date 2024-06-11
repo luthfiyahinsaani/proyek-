@@ -1,9 +1,10 @@
 import React from "react";
 import Layout from "../components/layout";
+import { graphql } from "gatsby";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
-const ContactPage = () => {
+const ContactPage = ({data}) => {
     const whatsappNumber = "6289526448697"; 
 
     return (
@@ -14,10 +15,19 @@ const ContactPage = () => {
                         <FontAwesomeIcon icon={faWhatsapp} />
                     </a>
                 </h1>
-                <p>Untuk informasi mengenai Harga Pasir & Harga Batu terbaru. Silahkan Hubungi Kami Dengan Klik Icon WhatsaPP diatas.</p>
+                <p className="text-slate-900 text-base mt-8">{data.site.siteMetadata.contact}</p>
             </div>
         </Layout>
     );
 }
 
+export const query = graphql `
+  query IndexPageQuery {
+    site {
+      siteMetadata {
+        contact
+      }
+    }
+  }
+`
 export default ContactPage;

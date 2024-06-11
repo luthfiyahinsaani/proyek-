@@ -9,6 +9,8 @@ module.exports = {
     Tidak ada biaya tambahan lainnya, langsung kita bongkar muatan
     3. Bayar ditempat (COD)
     Pembayaran Aman & nyaman bisa langsung di lokasi tujuan.`,
+    about: `Sumber pasir adalah Suplier bahan Bangunan yang menyediakan segala jenis pasir dan batu untuk kebutuhan pembagunan rumah dan lain-lain. System pembayaran bisa melalui COD “Barang sampai langsung bayar`,
+    contact: `Untuk informasi mengenai Harga Pasir & Harga Batu terbaru. Silahkan Hubungi Kami Dengan Klik Icon WhatsaPP diatas`,
     author: `sumberpasir`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     keyword: `digital marketing, gatsbyjs, seo`
@@ -19,7 +21,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/src/templates/`,
+        path: `${__dirname}/blog/`,
       },
     },
     "gatsby-plugin-mdx",
